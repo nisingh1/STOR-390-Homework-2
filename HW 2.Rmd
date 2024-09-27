@@ -77,5 +77,5 @@ Choice of $K$ can also influence this classifier.  Why would choosing $K = 6$ no
 
 Build a github repository to store your homework assignments.  Share the link in this file.  
 
-***[GitHub Repo (link)](https://github.com/nisingh1/STOR-390-Homework-2.git)***
+***[GitHub Repo (https://github.com/nisingh1/STOR-390-Homework-2.git)](https://github.com/nisingh1/STOR-390-Homework-2.git)***
 
