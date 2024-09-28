@@ -65,13 +65,13 @@ summary(iris_target_category)
 ***There is a stark difference in the representation of different classes between the test and target subsets. The test subset has the majority class 'versicolor', while 'setosa' and 'virginica' have much lower representation than the majority class. The target subset has the majority class 'setosa' (with 'virginica' coming in at a close second). The target subset has a much lower representation of 'versicolor' compared to 'setosa' and 'virginica' Thus, the data that the KNN classifier was "trained" on happens to underrepresent the majority class label of the test subset. ***
 
 ***Since KNN relies on the distance between the testing observations and target subset observations to classify testing observations, the mismatch in representation between the different classes in both subsets contributes to the higher classification error. Since there are fewer 'versicolor' observations in the target subset, the KNN classifier may not be able to discern a clear boundary between 'versicolor' and other the other two classes. This causes poor generalization to the test subset, leading to the observed decrease in classification accuracy.***
-#
+
 
 Choice of $K$ can also influence this classifier.  Why would choosing $K = 6$ not be advisable for this data? 
 
 ***We are attempting to discern between three class labels. If $K = 6$, then $K$ is divisible by the number of class labels we have. There is a possibility that we may encounter a situation where the $K = 6$ nearest neighbors are two 'setosa', two 'versicolor', and two 'virginica'. This would result in a three-way tie (and no clear class label for the test observation). A more probable scenario is a two-way tie between any two class labels.***
 
-***A choice of $K$ that is not divisible by the number of class labels could reduce the chance of a tie. It would still be possible to tie if we had, for instance, a scenario where the $K = 5$ nearest neighbors are two 'setosa', two 'versicolor', and one 'virginica (thus causing a two-way tie).***
+***A choice of $K$ that is not divisible by the number of class labels could reduce the chance of a tie. It would still be possible to tie if we had, for instance, a scenario where the $K = 5$ nearest neighbors are two 'setosa', two 'versicolor', and one 'virginica' (thus causing a two-way tie). But it is less likely for this to happen than if $K$ is divisible by the number of class labels we have.***
 
 #
 
